@@ -1,0 +1,30 @@
+The main advantage of functional style over the imperative style : you have to formulate the result you want to obtain
+the "what" and not the step  you need to perform to obtain it - the "how".
+
+Collector are extremely useful because they provide a concise  yet flexible way to define  the criteria  that collect uses to
+produce the resulting collection.
+
+
+Predefined collectors:
+
+    1. Reducing and summarizing streams elements to a single value.
+    2. Grouping elements.
+    3. Partitioning elements.
+
+
+
+collectors(the parameter to the stream method collect) are typicaly used in case where it's necessary to reorganize the
+streams items into a collections But more generally , they can be used every time you want to combine all the items into
+the stream into a single result.
+
+
+The collector returned by joining factory method concatenates into a single string all String
+resulting from invoking the toString method on each Object in stream.
+
+Note that joining internally make use of StringBuilder  to append the generated String  into one.
+
+
+
+
+Collectors.reduce factory method is a generalized way of reducing the stream.
+
